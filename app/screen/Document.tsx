@@ -39,14 +39,17 @@ export default function Document() {
     <View style={{ flex: 1 }}>
       {fileName && <Text style={styles.head}> {fileName}</Text>}
       {fileData?.endsWith("pdf") ? (
-        <Pdf
-          source={{ uri: fileData }}
-          style={{ flex: 1 }}
-          onLoadComplete={(numPages) =>
-            console.log(`Loaded PDF with ${numPages} pages`)
-          }
-          onError={(error) => console.log("PDF error:", error)}
-        />
+        <View style={styles.pdfView}>
+          <Pdf
+            source={{ uri: fileData }}
+            style={styles.pdfStyle}
+            singlePage={true}
+            onLoadComplete={(numPages) =>
+              console.log(`Loaded PDF with ${numPages} pages`)
+            }
+            onError={(error) => console.log("PDF error:", error)}
+          />
+        </View>
       ) : fileData && testImg.test(fileData) ? (
         <Image
           style={styles.image}
@@ -96,5 +99,16 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 16,
     color: "#fff",
+  },
+  pdfStyle: {
+    flex: 1,
+    backgroundColor: "#ccffe0",
+    borderRadius: 10,
+  },
+  pdfView: {
+    backgroundColor: "#c0ffab",
+    height: 200,
+    width: "48%",
+    borderRadius: 10,
   },
 });
