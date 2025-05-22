@@ -19,8 +19,6 @@
       "edgeToEdgeEnabled": true,
       "permissions": [
         "android.permission.READ_CONTACTS",
-        "android.permission.WRITE_CONTACTS",
-        "android.permission.READ_CONTACTS",
         "android.permission.WRITE_CONTACTS"
       ],
       "package": "com.anonymous.Contacts"
@@ -32,10 +30,12 @@
     },
     "plugins": [
       "expo-router",
-      "expo-document-picker",
-      {
-        "iCloudContainerEnvironment": "Production"
-      },
+      [
+        "expo-document-picker",
+        {
+          "iCloudContainerEnvironment": "Production"
+        }
+      ],
       [
         "expo-splash-screen",
         {
@@ -70,7 +70,8 @@
         {
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
-      ]
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
