@@ -35,12 +35,15 @@
     "expo-status-bar": "~2.2.3",
     "expo-symbols": "~0.4.4",
     "expo-system-ui": "~5.0.7",
+    "expo-video-thumbnails": "~9.1.3",
     "expo-web-browser": "~14.1.6",
+    "mammoth": "^1.9.0",
     "opencage-api-client": "^1.1.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-native": "0.79.2",
     "react-native-blob-util": "^0.21.3",
+    "react-native-fs": "^2.20.0",
     "react-native-gesture-handler": "~2.24.0",
     "react-native-pdf": "^6.7.7",
     "react-native-reanimated": "~3.17.4",
@@ -48,7 +51,9 @@
     "react-native-screens": "~4.10.0",
     "react-native-vector-icons": "^10.2.0",
     "react-native-web": "~0.20.0",
-    "react-native-webview": "^13.13.5"
+    "react-native-webview": "13.13.5",
+    "react-native-xml2js": "^1.0.3",
+    "react-native-zip-archive": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
